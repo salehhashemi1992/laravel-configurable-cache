@@ -21,4 +21,3 @@ You can add these configurations to your cache.php config file:
             'duration' => '+3 minutes',
         ],
     ]
-
