@@ -1,12 +1,11 @@
 {
     "name": "salehhashemi1992/cache-manager",
-    "description": ":package_description",
+    "description": "configurable laravel cache manager\n\n",
     "license": "MIT",
     "authors": [
         {
-            "name": "Author Name",
-            "email": "author@email.com",
-            "homepage": "http://author.com"
+            "name": "Saleh Hashemi",
+            "email": "salpars2004@email.com"
         }
     ],
     "homepage": "https://github.com/salehhashemi1992/cache-manager",
