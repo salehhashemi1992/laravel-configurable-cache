@@ -1,0 +1,41 @@
+{
+    "name": "salehhashemi1992/cache-manager",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@email.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/salehhashemi1992/cache-manager",
+    "keywords": ["Laravel", "CacheManager"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Salehhashemi1992\\CacheManager\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Salehhashemi1992\\CacheManager\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Salehhashemi1992\\CacheManager\\CacheManagerServiceProvider"
+            ],
+            "aliases": {
+                "CacheManager": "Salehhashemi1992\\CacheManager\\Facades\\CacheManager"
+            }
+        }
+    }
+}
