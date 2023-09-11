@@ -1,7 +1,7 @@
 # Laravel Customized Cache Manager
 With this Class you can access laravel main cache facade with you configurations like cache prefix and cache ttl duration.
 
-You can change these configurations in your cache.php config file:
+You can add these configurations to your cache.php config file:
 
     'configs' => [
         'default' => [
