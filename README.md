@@ -9,7 +9,7 @@ Laravel Configurable Cache is a package that provides a configurable cache manag
 ## Installation
 You can install the package via composer:
 ```bash
-composer require Salehhashemi1992/configurable-cache
+composer require Salehhashemi/configurable-cache
 ```
 
 Next, from the command line type:
@@ -23,7 +23,7 @@ requirements.
 ## Usage
 To use the package, you can use the `ConfigurableCache` class methods. Here's an example:
 ```php
-use Salehhashemi1992\ConfigurableCache\ConfigurableCache;
+use Salehhashemi\ConfigurableCache\ConfigurableCache;
     
 // Storing an item in the cache
 ConfigurableCache::put('testKey', 'Hello World!', 'default');
