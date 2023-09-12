@@ -18,5 +18,5 @@ return [
             'prefix' => '_otp_',
             'duration' => '+3 minutes',
         ],
-    ]
+    ],
 ];
