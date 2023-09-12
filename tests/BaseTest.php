@@ -1,6 +1,6 @@
 <?php
 
-namespace Salehhashemi1992\ConfigurableCache\Tests;
+namespace Salehhashemi\ConfigurableCache\Tests;
 
 use Orchestra\Testbench\TestCase;
 

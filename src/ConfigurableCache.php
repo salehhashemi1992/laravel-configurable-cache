@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Salehhashemi1992\ConfigurableCache;
+namespace Salehhashemi\ConfigurableCache;
 
 use Carbon\CarbonInterface;
 use Closure;

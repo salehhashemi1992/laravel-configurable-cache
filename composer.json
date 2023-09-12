@@ -1,5 +1,5 @@
 {
-    "name": "salehhashemi1992/laravel-configurable-cache",
+    "name": "salehhashemi/laravel-configurable-cache",
     "description": "Configurable Laravel cache manager\n\n",
     "license": "MIT",
     "authors": [
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Salehhashemi1992\\ConfigurableCache\\": "src/"
+            "Salehhashemi\\ConfigurableCache\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Salehhashemi1992\\ConfigurableCache\\Tests\\": "tests"
+            "Salehhashemi\\ConfigurableCache\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Salehhashemi1992\\ConfigurableCache\\ConfigurableCacheServiceProvider"
+                "Salehhashemi\\ConfigurableCache\\ConfigurableCacheServiceProvider"
             ]
         }
     }

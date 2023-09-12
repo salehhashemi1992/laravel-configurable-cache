@@ -1,9 +1,9 @@
 <?php
 
-namespace Salehhashemi1992\ConfigurableCache\Tests;
+namespace Salehhashemi\ConfigurableCache\Tests;
 
-use Salehhashemi1992\ConfigurableCache\ConfigurableCache;
-use Salehhashemi1992\ConfigurableCache\ConfigurableCacheServiceProvider;
+use Salehhashemi\ConfigurableCache\ConfigurableCache;
+use Salehhashemi\ConfigurableCache\ConfigurableCacheServiceProvider;
 
 class ConfigurableCacheTest extends BaseTest
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Salehhashemi1992\ConfigurableCache;
+namespace Salehhashemi\ConfigurableCache;
 
 use Illuminate\Support\ServiceProvider;
 
