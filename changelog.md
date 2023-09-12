@@ -1,6 +1,9 @@
 # Changelog
 
-All notable changes to `CacheManager` will be documented in this file.
+All notable changes will be documented in this file.
+
+## v1.1
+- Complete rewrite of whole configurable cache manager package
 
 ## v1.0
 - Initial version
