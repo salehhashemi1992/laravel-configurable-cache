@@ -30,14 +30,19 @@ To use the package, you can use the `ConfigurableCache` class methods. Here's an
 ```php
 use Salehhashemi\ConfigurableCache\ConfigurableCache;
     
-// Storing an item in the cache
-ConfigurableCache::put('testKey', 'Hello World!', 'default');
+// Storing an item in the cache with `_tiny_` prefix for 15 minutes
+ConfigurableCache::put('testKey', 'Hello World!', 'tiny');
     
-// Retrieving an item from the cache
-$value = ConfigurableCache::get('testKey', 'tiny');
+// Retrieving an item from the cache with `_short_` prefix that is stored for an hour
+$value = ConfigurableCache::get('testKey', 'short');
 
-// Delete a cache item
-ConfigurableCache::delete('testKey', 'short');
+// Delete a cache item with `_otp_` prefix
+ConfigurableCache::delete('testKey', 'otp');
+
+// if `testKey` doesn't exist in the 'default' cache, the Closure will be executed and its result will be stored in the cache under `testKey` with `_default_` prefix
+$value = ConfigurableCache::remember('testKey', 'default', function () {
+    return 'Hello World!';
+});
 ```
 
 ## Default configuration
