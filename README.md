@@ -14,12 +14,12 @@ Laravel Configurable Cache is a package that provides a configurable cache manag
 ## Installation
 You can install the package via composer:
 ```bash
-composer require Salehhashemi/configurable-cache
+composer require salehhashemi/laravel-configurable-cache
 ```
 
 Next, from the command line type:
 ```bash
-php artisan vendor:publish --provider="Salehhashemi1992\ConfigurableCache\ConfigurableCacheServiceProvider"
+php artisan vendor:publish --provider="Salehhashemi\ConfigurableCache\ConfigurableCacheServiceProvider"
 ```
 
 Finally, adjust the settings in the published configuration file located in `config/configurable-cache.php` as per your 
