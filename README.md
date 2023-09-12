@@ -1,6 +1,41 @@
-# Laravel Customized Cache Manager
-With this Class you can access laravel main cache facade with you configurations like cache prefix and cache ttl duration.
+# Laravel Configurable Cache
 
+Laravel Configurable Cache is a package that provides a configurable cache management system for your Laravel application.
+
+## Features
+- Provides configurable cache settings with dedicated ttl and prefix for each
+- Supports all main cache operations provided by Laravel, such as put, get, increment, and delete
+
+## Installation
+You can install the package via composer:
+```bash
+composer require Salehhashemi1992/configurable-cache
+```
+
+Next, from the command line type:
+```bash
+php artisan vendor:publish --provider="Salehhashemi1992\ConfigurableCache\ConfigurableCacheServiceProvider"
+```
+
+Finally, adjust the settings in the published configuration file located in `config/configurable-cache.php` as per your 
+requirements.
+
+## Usage
+To use the package, you can use the `ConfigurableCache` class methods. Here's an example:
+```php
+use Salehhashemi1992\ConfigurableCache\ConfigurableCache;
+    
+// Storing an item in the cache
+ConfigurableCache::put('testKey', 'Hello World!', 'default');
+    
+// Retrieving an item from the cache
+$value = ConfigurableCache::get('testKey', 'tiny');
+
+// Delete a cache item
+ConfigurableCache::delete('testKey', 'short');
+```
+
+## Default configuration
 You can change these configurations in your cache.php config file:
 
     'configs' => [
@@ -21,3 +56,26 @@ You can change these configurations in your cache.php config file:
             'duration' => '+3 minutes',
         ],
     ]
+
+### Testing
+
+```bash
+composer test
+```
+
+### Changelog
+
+Please see [CHANGELOG](changelog.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](contributing.md) for details.
+
+## Credits
+
+- [Saleh Hashemi](https://github.com/salehhashemi1992)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](license.md) for more information.
