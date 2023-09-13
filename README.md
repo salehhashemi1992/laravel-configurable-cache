@@ -46,7 +46,7 @@ $value = ConfigurableCache::remember('testKey', 'default', function () {
 ```
 
 ## Default configuration
-You can change these configurations in your cache.php config file:
+You can change these configurations in your configurable-cache.php config file:
 
     'configs' => [
         'default' => [
