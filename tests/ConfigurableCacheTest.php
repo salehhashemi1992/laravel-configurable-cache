@@ -15,7 +15,6 @@ class ConfigurableCacheTest extends BaseTest
         return [ConfigurableCacheServiceProvider::class];
     }
 
-    /** @test */
     public function test_get_function_retrieves_correct_value_from_cache()
     {
         ConfigurableCache::put('testKey', 'testValue', 'default');
@@ -25,7 +24,6 @@ class ConfigurableCacheTest extends BaseTest
         $this->assertEquals('testValue', $value);
     }
 
-    /** @test */
     public function test_delete_function_removes_value_from_cache()
     {
         ConfigurableCache::put('testKey', 'testValue', 'tiny');
@@ -37,7 +35,6 @@ class ConfigurableCacheTest extends BaseTest
         $this->assertNull($value);
     }
 
-    /** @test */
     public function test_increment_function_increments_cache_value()
     {
         ConfigurableCache::put('testKey', 1);
@@ -49,7 +46,6 @@ class ConfigurableCacheTest extends BaseTest
         $this->assertEquals(2, $cacheValue);
     }
 
-    /** @test */
     public function test_remember_function_stores_closure_result_in_cache()
     {
         ConfigurableCache::remember('testKey', 'default', function () {
