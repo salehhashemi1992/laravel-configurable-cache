@@ -5,7 +5,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/salehhashemi/laravel-configurable-cache.svg?style=flat-square)](https://packagist.org/packages/salehhashemi/laravel-configurable-cache)
 [![Total Downloads](https://img.shields.io/packagist/dt/salehhashemi/laravel-configurable-cache.svg?style=flat-square)](https://packagist.org/packages/salehhashemi/laravel-configurable-cache)
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/salehhashemi1992/laravel-configurable-cache/run-tests.yml?branch=main&label=tests)](https://github.com/salehhashemi1992/laravel-configurable-cache/actions/workflows/run-tests.yml)
-[![StyleCI](https://github.styleci.io/repos/557792567/shield?branch=main)](https://github.styleci.io/repos/557792567?branch=main)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/salehhashemi1992/laravel-configurable-cache/static-analysis.yml?branch=main&label=static-analysis)](https://github.com/salehhashemi1992/laravel-configurable-cache/actions/workflows/static-analysis.yml)
 
 ![Header Image](./assets/header.png)
 
