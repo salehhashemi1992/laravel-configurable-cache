@@ -1,3 +1,5 @@
+<div align="center">
+
 # Laravel Configurable Cache
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/salehhashemi/laravel-configurable-cache.svg?style=flat-square)](https://packagist.org/packages/salehhashemi/laravel-configurable-cache)
@@ -6,6 +8,8 @@
 [![StyleCI](https://github.styleci.io/repos/557792567/shield?branch=main)](https://github.styleci.io/repos/557792567?branch=main)
 
 ![Header Image](./assets/header.png)
+
+</div>
 
 ## Features
 - Provides configurable cache settings with dedicated ttl and prefix for each
