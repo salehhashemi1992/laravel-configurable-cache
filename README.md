@@ -7,8 +7,10 @@
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/salehhashemi1992/laravel-configurable-cache/run-tests.yml?branch=main&label=tests)](https://github.com/salehhashemi1992/laravel-configurable-cache/actions/workflows/run-tests.yml)
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/salehhashemi1992/laravel-configurable-cache/static-analysis.yml?branch=main&label=static-analysis)](https://github.com/salehhashemi1992/laravel-configurable-cache/actions/workflows/static-analysis.yml)
 [![codecov](https://codecov.io/gh/salehhashemi1992/laravel-configurable-cache/graph/badge.svg?token=CAA6S86RZI)](https://codecov.io/gh/salehhashemi1992/laravel-configurable-cache)
-![Header Image](./assets/header.png)
 [![PHPStan](https://img.shields.io/badge/PHPStan-level%208-brightgreen.svg?style=flat)](https://phpstan.org/)
+
+![Header Image](./assets/header.png)
+
 
 </div>
 
