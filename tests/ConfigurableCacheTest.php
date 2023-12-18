@@ -48,7 +48,7 @@ class ConfigurableCacheTest extends BaseTest
 
     public function test_remember_function_stores_closure_result_in_cache()
     {
-        ConfigurableCache::remember('testKey', 'default', function () {
+        ConfigurableCache::remember('testKey', function () {
             return 'testValue';
         });
 

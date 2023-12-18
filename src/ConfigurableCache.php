@@ -17,11 +17,11 @@ class ConfigurableCache
      * @template TCacheValue
      *
      * @param  string  $key  The cache key to retrieve or store the item.
-     * @param  string  $config  The cache configuration to use (e.g., 'default').
      * @param  \Closure(): TCacheValue  $callback  The Closure to execute if the item is not found in the cache.
+     * @param  string  $config  The cache configuration to use (e.g., 'default').
      * @return TCacheValue The cached item or the result of the Closure execution.
      */
-    public static function remember(string $key, string $config, Closure $callback): mixed
+    public static function remember(string $key, Closure $callback, string $config = 'default'): mixed
     {
         $cacheKey = static::cacheKey($key, $config);
         $ttl = static::ttl($config);
