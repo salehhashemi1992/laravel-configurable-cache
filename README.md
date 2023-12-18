@@ -47,7 +47,7 @@ $value = ConfigurableCache::get('testKey', 'short');
 ConfigurableCache::delete('testKey', 'otp');
 
 // if `testKey` doesn't exist in the 'default' cache, the Closure will be executed and its result will be stored in the cache under `testKey` with `_default_` prefix
-$value = ConfigurableCache::remember('testKey', 'default', function () {
+$value = ConfigurableCache::remember('testKey', function () {
     return 'Hello World!';
 });
 ```
