@@ -3,18 +3,9 @@
 namespace Salehhashemi\ConfigurableCache\Tests;
 
 use Salehhashemi\ConfigurableCache\ConfigurableCache;
-use Salehhashemi\ConfigurableCache\ConfigurableCacheServiceProvider;
 
-class ConfigurableCacheTest extends BaseTest
+class ConfigurableCacheTest extends TestCase
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function getPackageProviders($app): array
-    {
-        return [ConfigurableCacheServiceProvider::class];
-    }
-
     public function test_get_function_retrieves_correct_value_from_cache()
     {
         ConfigurableCache::put('testKey', 'testValue', 'default');
