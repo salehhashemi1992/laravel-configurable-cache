@@ -8,6 +8,7 @@
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/salehhashemi1992/laravel-configurable-cache/static-analysis.yml?branch=main&label=static-analysis)](https://github.com/salehhashemi1992/laravel-configurable-cache/actions/workflows/static-analysis.yml)
 [![codecov](https://codecov.io/gh/salehhashemi1992/laravel-configurable-cache/graph/badge.svg?token=CAA6S86RZI)](https://codecov.io/gh/salehhashemi1992/laravel-configurable-cache)
 [![PHPStan](https://img.shields.io/badge/PHPStan-level%208-brightgreen.svg?style=flat)](https://phpstan.org/)
+[![PHP Version Require](http://poser.pugx.org/salehhashemi/laravel-configurable-cache/require/php)](https://packagist.org/packages/salehhashemi/laravel-configurable-cache)
 
 ![Header Image](./assets/header.png)
 
@@ -17,6 +18,15 @@
 ## Features
 - Provides configurable cache settings with dedicated ttl and prefix for each
 - Supports all main cache operations provided by Laravel, such as put, get, increment, and delete
+
+## Requirements
+
+- `PHP: ^8.1`
+- `Laravel framework: ^9`
+
+| Version | L9                 | L10                | L11                |
+|---------|--------------------|--------------------|--------------------|
+| 1.4     | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Installation
 You can install the package via composer:
