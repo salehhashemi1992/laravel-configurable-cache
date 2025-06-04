@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Salehhashemi\ConfigurableCache;
 
 use Carbon\CarbonInterface;
+use Carbon\CarbonInterval;
 use Closure;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -106,8 +107,23 @@ class ConfigurableCache
      */
     protected static function ttl(string $config): CarbonInterface
     {
-        return Carbon::parse(
-            config('configurable-cache.configs.'.$config.'.duration')
-        );
+        $durationString = config('configurable-cache.configs.'.$config.'.duration');
+
+        if (empty($durationString)) {
+            throw new \InvalidArgumentException("Cache duration string for config '{$config}' is empty.");
+        }
+
+        try {
+            $interval = CarbonInterval::make($durationString);
+
+            if (!$interval) { // CarbonInterval::make can return false
+                throw new \InvalidArgumentException("Failed to create interval from duration string '{$durationString}' for config '{$config}'.");
+            }
+
+            return Carbon::now()->add($interval);
+        } catch (\Exception $e) {
+            // Catch any other exception during interval creation or addition
+            throw new \RuntimeException("Error processing duration string '{$durationString}' for config '{$config}': ".$e->getMessage(), 0, $e);
+        }
     }
 }

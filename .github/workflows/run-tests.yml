@@ -10,9 +10,13 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         php: [8.1, 8.2, 8.3]
-        laravel: [9.*, 10.*, 11.*]
+        laravel: [9.*, 10.*, 11.*, 12.*]
         dependency-version: [prefer-lowest, prefer-stable]
         include:
+          - laravel: 12.*
+            testbench: 10.*
+            phpunit: 12.*
+
           - laravel: 11.*
             testbench: 9.*
             phpunit: 11.*
@@ -26,6 +30,9 @@ jobs:
             phpunit: 10.*
 
         exclude:
+          - laravel: 12.*
+            php: 8.1
+
           - laravel: 11.*
             php: 8.1
 
@@ -47,7 +54,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:>=2.62.1" --no-interaction --no-update
+          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
 
       - name: Execute tests with Coverage
