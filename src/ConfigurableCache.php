@@ -8,6 +8,7 @@ use Carbon\CarbonInterface;
 use Closure;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
+use RuntimeException;
 
 class ConfigurableCache
 {
@@ -17,7 +18,7 @@ class ConfigurableCache
      * @template TCacheValue
      *
      * @param  string  $key  The cache key to retrieve or store the item.
-     * @param  \Closure(): TCacheValue  $callback  The Closure to execute if the item is not found in the cache.
+     * @param  Closure(): TCacheValue  $callback  The Closure to execute if the item is not found in the cache.
      * @param  string  $config  The cache configuration to use (e.g., 'default').
      * @return TCacheValue The cached item or the result of the Closure execution.
      */
@@ -49,7 +50,7 @@ class ConfigurableCache
      * @param  mixed  $value  The value to store.
      * @param  string  $config  The name of the configuration to use.
      *
-     * @throws \RuntimeException
+     * @throws RuntimeException
      */
     public static function put(string $key, mixed $value, string $config = 'default'): void
     {
@@ -59,7 +60,7 @@ class ConfigurableCache
         $result = Cache::put($cacheKey, $value, $ttl);
 
         if (! $result) {
-            throw new \RuntimeException('Failed to store data in the cache.');
+            throw new RuntimeException('Failed to store data in the cache.');
         }
     }
 
