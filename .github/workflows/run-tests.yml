@@ -1,7 +1,5 @@
 name: "Run Tests"
-
 on: [push, pull_request]
-
 jobs:
   test:
     runs-on: ${{ matrix.os }}
@@ -9,50 +7,35 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        php: [8.1, 8.2, 8.3]
-        laravel: [9.*, 10.*, 11.*]
+        php: [8.2, 8.3]
+        laravel: [12.*, 13.*]
         dependency-version: [prefer-lowest, prefer-stable]
         include:
-          - laravel: 11.*
-            testbench: 9.*
+          - laravel: 12.*
+            testbench: 10.*
             phpunit: 11.*
-
-          - laravel: 10.*
-            testbench: 8.*
-            phpunit: 11.*
-
-          - laravel: 9.*
-            testbench: 7.*
-            phpunit: 10.*
-
+          - laravel: 13.*
+            testbench: 11.*
+            phpunit: 12.*
         exclude:
-          - laravel: 11.*
-            php: 8.1
-
-          - laravel: 9.*
-            php: 8.3
-
+          - laravel: 13.*
+            php: 8.2
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           extensions: curl, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, iconv
           coverage: xdebug
-
       - name: Install dependencies
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:>=2.62.1" --no-interaction --no-update
           composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
-
       - name: Execute tests with Coverage
         run: vendor/bin/phpunit --coverage-clover=coverage.xml
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:

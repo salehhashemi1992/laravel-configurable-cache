@@ -21,12 +21,12 @@
 
 ## Requirements
 
-- `PHP: ^8.1`
-- `Laravel framework: ^9`
+- `PHP: ^8.2`
+- `Laravel framework: ^12`
 
-| Version | L9                 | L10                | L11                |
-|---------|--------------------|--------------------|--------------------|
-| 1.4     | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Version | L12                | L13                |
+|---------|--------------------|--------------------|
+| 2.0     | :white_check_mark: | :white_check_mark: |
 
 ## Installation
 You can install the package via composer:
